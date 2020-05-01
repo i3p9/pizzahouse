@@ -25,6 +25,11 @@ Route::get('/pizzas', function () {
         ['type' => 'veggy', 'base' => 'thin and crispy']
     ];
 
+    $name = request('name'); //requesting name query variable and storing in $name
 
-    return view('pizzas', ['pizzas' => $pizzas] );
+    return view('pizzas', [
+        'pizzas' => $pizzas,
+        'name' => $name,
+        'age' => request('age') //getting query parameters directly instead of what i did with $name 
+        ]);
 });
