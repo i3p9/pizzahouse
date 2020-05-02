@@ -3,21 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Pizza;
 
 class PizzaController extends Controller
 {
     public function index(){
-        $pizzas = [
-            ['type' => 'hawaiian', 'base' => 'cheesy'],
-            ['type' => 'volcano', 'base' => 'garlic crust'],
-            ['type' => 'veggy', 'base' => 'thin and crispy']
-        ];
-    
-        $name = request('name'); //requesting name query variable and storing in $name
-    
+        //$pizzas = Pizza::all();
+        //$pizzas = Pizza::orderBy('base')->get();
+        //$pizzas = Pizza::where('type', 'hawaiian')->get();
+        $pizzas = Pizza::latest()->get();
+
+
         return view('pizzas', [
             'pizzas' => $pizzas,
-            'name' => $name,
+            'name' => request('name'),
             'age' => request('age') //getting query parameters directly instead of what i did with $name 
             ]);
     }
