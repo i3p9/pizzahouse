@@ -21,6 +21,8 @@
             <img src="/img/pizza-house.png" alt="Pizza house logo" style="width:20%;height:20%">
             <br>Fahim's Best Pizza
         </div>
+        <p class="mssg">{{ session('mssg')}}</p>
+        <a href="/pizzas/create">Create a pizza</a>
     </div>
 </div>
 @endsection
