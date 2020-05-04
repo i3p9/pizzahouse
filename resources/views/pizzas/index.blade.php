@@ -11,6 +11,8 @@
             {{ $i->name }} - {{ $i->type }} - {{ $i->base }} - @foreach ($i->toppings as $topping) {{ $topping }}, @endforeach
         </div>
         @endforeach
+        <p class="mssg">{{ session('mssg')}}</p>
+        <a href="/">Go back home</a>
     </div>
 </div>
 @endsection
