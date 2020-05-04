@@ -22,7 +22,7 @@
             <br>Fahim's Best Pizza
         </div>
         <p class="mssg">{{ session('mssg')}}</p>
-        <a href="/pizzas/create">Create a pizza</a>
+        <a href="/pizzas/create">Order a pizza</a>
     </div>
 </div>
 @endsection

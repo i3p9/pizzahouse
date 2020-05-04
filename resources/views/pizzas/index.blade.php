@@ -8,8 +8,7 @@
         </div>
         @foreach ($pizzas as $i)
         <div>
-            {{ $i->name }} - {{ $i->type }} - {{ $i->base }}
-            {{ $i->index }}
+            {{ $i->name }} - {{ $i->type }} - {{ $i->base }} - @foreach ($i->toppings as $topping) {{ $topping }}, @endforeach
         </div>
         @endforeach
     </div>
