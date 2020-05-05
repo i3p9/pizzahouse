@@ -5,7 +5,7 @@
     <h1>
         Create a new pizza
     </h1>
-    <form action="/pizzas" method="POST">
+    <form action="{{ route('pizzas.store') }}" method="POST">
         @csrf
         <label for="name">Your name: </label>
         <input type="text" id="name" name="name">
