@@ -86,8 +86,11 @@ html, body {
   
     input[type=checkbox]{
       margin: 10px;
+      border: 0;
     }
-  
+    fieldset{
+      border: 0;
+    }
     input[type=submit]{
       background: #5e2195;
       padding: 8px 20px;

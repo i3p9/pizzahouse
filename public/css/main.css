@@ -89,6 +89,11 @@ footer {
 
 .create-pizza input[type=checkbox] {
   margin: 10px;
+  border: 0;
+}
+
+.create-pizza fieldset {
+  border: 0;
 }
 
 .create-pizza input[type=submit] {
